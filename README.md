@@ -18,5 +18,5 @@ sudo ln -s gpu-status.sh /usr/local/bin/gpustatus
 ```bash
 1. bash gpu-status.sh or 
 2. ./gpu-status.sh or
-3. gpu-status (if have linked it to /usr/local/bin/gpustatus)
+3. gpustatus (if have linked it to /usr/local/bin/gpustatus)
 ```
