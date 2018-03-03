@@ -7,7 +7,7 @@ Show each user gpu usage under each gpu, provide more details than nvidia-smi
 
 # Install
 ```bash
-wget https://github.com/Fangyh09/gpu-status/blob/master/gpu-status.sh
+wget https://raw.githubusercontent.com/Fangyh09/gpu-status/master/gpu-status.sh
 chmod 755 gpu-status.sh
 
 # optional 
