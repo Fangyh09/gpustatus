@@ -6,9 +6,10 @@ lines_date=7
 pre_lines=$(( $lines_date + $num_gpus * 3 + 6))
 lines=${pre_lines},"$"p
 
-gpus=`nvidia-smi| sed -n "$lines" | head -n -1 | awk '{print $2}'`
-pids=`nvidia-smi| sed -n "$lines" | head -n -1 | awk '{print $3}'`
-mems=`nvidia-smi| sed -n "$lines" | head -n -1 | awk '{print $(NF-1)}'`
+data=`nvidia-smi| sed -n "$lines" | head -n -1`
+gpus=`echo "$data" | awk '{print $2}'`
+pids=`echo "$data" | awk '{print $3}'`
+mems=`echo "$data" | awk '{print $(NF-1)}'`
 
 names_arr=()
 gpus_arr=()
