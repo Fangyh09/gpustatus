@@ -10,10 +10,9 @@ data=`nvidia-smi| sed -n "$lines" | head -n -1`
 
 gpus=`echo "$data" | awk '{print $2}'`
 pids=`echo "$data" | awk '{print $3}'`
-mems=`echo "$data" | awk '{print $(NF-1)}'`
+mems=`echo "$data" | awk '{print $6}'`
 
 total_memory=`nvidia-smi| sed -n 8,9p |  awk '{print $11}' | tail -n 1`
-
 names_arr=()
 gpus_arr=()
 mems_arr=()
